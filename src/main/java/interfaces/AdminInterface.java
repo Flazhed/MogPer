@@ -6,6 +6,7 @@
 package interfaces;
 
 import dtos.*;
+import etos.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public interface AdminInterface {
      * @param password Password of the admin.
      * @return Returns an AdminIdentifier if the given information was correct.
      */
-    AdminDetail login(String userName, String password);
+    AdminDetail login(String userName, String password) throws LoginException, UnexpectedErrorException;
     
     /**
      * Creates new departures by selecting a date/time and using an existing route.
@@ -29,32 +30,32 @@ public interface AdminInterface {
      * @param departureTime The Date and time of the departure.
      * @return The newly created departureIdentifier object
      */
-    DepartureIdentifier createDeparture(RouteIdentifier route, LocalDateTime departureTime);
+    DepartureIdentifier createDeparture(RouteIdentifier route, LocalDateTime departureTime) throws UnexpectedErrorException;
     
     /**
      * Fetches a list of All departures in the system. (Is this a good idea ?)
      * @return A list with all the DepartureIdentifiers
      */
-    List<DepartureIdentifier> getAllDepartures();
+    List<DepartureIdentifier> getAllDepartures() throws UnexpectedErrorException;
     
     /**
      * Fetches a single departure, on a given Id.
      * @param departureId Id of the departure.
      * @return A single Departureidentifier.
      */
-    DepartureIdentifier getDeparture(long departureId);
+    DepartureIdentifier getDeparture(long departureId) throws UnexpectedErrorException;
     
     /**
      * Allows an admin to update an existing depature.
      * @param departure The edited departure. DepartureId CANNOT be edited.
      * @return The updated DepartureIdentifier.
      */
-    DepartureIdentifier updateDeparture(DepartureIdentifier departure);
+    DepartureIdentifier updateDeparture(DepartureIdentifier departure) throws UnexpectedErrorException;
     
     /**
      * Allows an admin to delete an existing departure.
      * @param departureId The Id on the departure that needs to be deleted.
      * @return The deleted DepartureIdentifier.
      */
-    DepartureIdentifier deleteDeparture(long departureId);
+    DepartureIdentifier deleteDeparture(long departureId) throws UnexpectedErrorException;
 }

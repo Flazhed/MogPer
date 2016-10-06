@@ -9,6 +9,7 @@ import entities.TravellingEntity;
 import dtos.*;
 import java.time.LocalDate;
 import java.util.List;
+import etos.*;
 
 /**
  *
@@ -22,13 +23,13 @@ public interface UserInterface {
      * @param route The Route object that holds information about destination/origin
      * @return Returns a List of departures
      */
-    List<DepartureIdentifier> getDepartures(LocalDate departureDate, RouteIdentifier route);
+    List<DepartureIdentifier> getDepartures(LocalDate departureDate, RouteIdentifier route) throws NoAvailableDateException, UnexpectedErrorException;
     
     /**
      * Fetches a list of of RouteSummaries, in order for the frontend to display the existing routes.
      * @return List of RouteSummaries
      */
-    List<RouteIdentifier> getAllRouteSummaries();
+    List<RouteIdentifier> getAllRouteSummaries() throws UnexpectedErrorException;
     
     /**
      * Attempts to make a reservation on the departure that a user wishes to travel with.
@@ -37,12 +38,12 @@ public interface UserInterface {
      * @param travellingEntities A list of all the travellingentities .
      * @return Returns a newly created ReservationIdentifier
      */
-    ReservationIdentifier createReservation(PersonDetail person, long departureId, List<TravellingEntity> travellingEntities);
+    ReservationIdentifier createReservation(PersonDetail person, long departureId, List<TravellingEntity> travellingEntities) throws InvalidReservationException, UnexpectedErrorException;
     
     /**
      * Get a list of the different types of TravellingEntities, used to display in the front-end
      * @return List of TravellingEntities.
      */
-    List<TravellingEntity> getTravellingEntities();
+    List<TravellingEntity> getTravellingEntities() throws UnexpectedErrorException;
     
 }
