@@ -43,19 +43,19 @@ public interface AdminInterface {
      * @param departureId Id of the departure.
      * @return A single Departureidentifier.
      */
-    DepartureIdentifier getDeparture(long departureId) throws UnexpectedErrorException;
+    DepartureIdentifier getDeparture(long departureId) throws NotFoundException, UnexpectedErrorException;
     
     /**
      * Allows an admin to update an existing depature.
      * @param departure The edited departure. DepartureId CANNOT be edited.
      * @return The updated DepartureIdentifier.
      */
-    DepartureIdentifier updateDeparture(DepartureIdentifier departure) throws UnexpectedErrorException;
+    DepartureIdentifier updateDeparture(DepartureIdentifier departure) throws NotFoundException, UnexpectedErrorException;
     
     /**
      * Allows an admin to delete an existing departure.
      * @param departureId The Id on the departure that needs to be deleted.
      * @return The deleted DepartureIdentifier.
      */
-    DepartureIdentifier deleteDeparture(long departureId) throws UnexpectedErrorException;
+    DepartureIdentifier deleteDeparture(long departureId) throws NotFoundException, UnexpectedErrorException;
 }
