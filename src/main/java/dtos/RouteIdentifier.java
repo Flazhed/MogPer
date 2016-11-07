@@ -12,5 +12,13 @@ package dtos;
 public class RouteIdentifier {
     
     private long routeId;
+
+    public long getRouteId() {
+        return routeId;
+    }
+
+    public void setRouteId(long routeId) {
+        this.routeId = routeId;
+    }
     
 }

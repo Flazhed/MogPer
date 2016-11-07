@@ -18,5 +18,37 @@ public class ReservationDetail extends ReservationIdentifier {
     private PersonDetail person;
     private DepartureDetail departure;
     private List<TravellingEntity> travellingEntities;
+
+    public boolean isHasArrived() {
+        return hasArrived;
+    }
+
+    public void setHasArrived(boolean hasArrived) {
+        this.hasArrived = hasArrived;
+    }
+
+    public PersonDetail getPerson() {
+        return person;
+    }
+
+    public void setPerson(PersonDetail person) {
+        this.person = person;
+    }
+
+    public DepartureDetail getDeparture() {
+        return departure;
+    }
+
+    public void setDeparture(DepartureDetail departure) {
+        this.departure = departure;
+    }
+
+    public List<TravellingEntity> getTravellingEntities() {
+        return travellingEntities;
+    }
+
+    public void setTravellingEntities(List<TravellingEntity> travellingEntities) {
+        this.travellingEntities = travellingEntities;
+    }
     
 }

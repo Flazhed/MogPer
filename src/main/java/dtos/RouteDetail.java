@@ -17,5 +17,37 @@ public class RouteDetail extends RouteIdentifier{
     private HarbourSummary harbourOrigin;
     private HarbourSummary harbourDestination;
     private Price price;
+
+    public double getTravelTime() {
+        return travelTime;
+    }
+
+    public void setTravelTime(double travelTime) {
+        this.travelTime = travelTime;
+    }
+
+    public HarbourSummary getHarbourOrigin() {
+        return harbourOrigin;
+    }
+
+    public void setHarbourOrigin(HarbourSummary harbourOrigin) {
+        this.harbourOrigin = harbourOrigin;
+    }
+
+    public HarbourSummary getHarbourDestination() {
+        return harbourDestination;
+    }
+
+    public void setHarbourDestination(HarbourSummary harbourDestination) {
+        this.harbourDestination = harbourDestination;
+    }
+
+    public Price getPrice() {
+        return price;
+    }
+
+    public void setPrice(Price price) {
+        this.price = price;
+    }
     
 }

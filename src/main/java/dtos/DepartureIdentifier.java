@@ -12,5 +12,13 @@ package dtos;
 public class DepartureIdentifier {
     
     private long departureId;
+
+    public long getDepartureId() {
+        return departureId;
+    }
+
+    public void setDepartureId(long departureId) {
+        this.departureId = departureId;
+    }
     
 }

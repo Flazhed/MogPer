@@ -14,5 +14,29 @@ public class RouteSummary extends RouteIdentifier {
     private double travelTime;
     private String harbourOrigin;
     private String harbourDestination;
+
+    public double getTravelTime() {
+        return travelTime;
+    }
+
+    public void setTravelTime(double travelTime) {
+        this.travelTime = travelTime;
+    }
+
+    public String getHarbourOrigin() {
+        return harbourOrigin;
+    }
+
+    public void setHarbourOrigin(String harbourOrigin) {
+        this.harbourOrigin = harbourOrigin;
+    }
+
+    public String getHarbourDestination() {
+        return harbourDestination;
+    }
+
+    public void setHarbourDestination(String harbourDestination) {
+        this.harbourDestination = harbourDestination;
+    }
     
 }

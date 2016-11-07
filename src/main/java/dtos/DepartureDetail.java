@@ -15,5 +15,21 @@ public class DepartureDetail extends DepartureIdentifier{
     
     private LocalDateTime departureTime;
     private RouteSummary routeSummary;
+
+    public LocalDateTime getDepartureTime() {
+        return departureTime;
+    }
+
+    public void setDepartureTime(LocalDateTime departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public RouteSummary getRouteSummary() {
+        return routeSummary;
+    }
+
+    public void setRouteSummary(RouteSummary routeSummary) {
+        this.routeSummary = routeSummary;
+    }
     
 }
