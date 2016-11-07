@@ -5,14 +5,16 @@
  */
 package mogper.test;
 
-import interfaces.AdminInterface;
-import interfaces.UserInterface;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
  * @author Soren
  */
-public class BackendHolder {
-    public static AdminInterface adminInterface;
-    public static UserInterface userInterface;
+public class UserInterfaceTest {
+    
+    public UserInterfaceTest() {
+    }
+    
 }
