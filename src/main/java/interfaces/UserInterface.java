@@ -24,6 +24,14 @@ public interface UserInterface {
      * @return Returns a List of departures
      */
     List<DepartureIdentifier> getDepartures(LocalDate departureDate, RouteIdentifier route) throws NoAvailableDateException, UnexpectedErrorException;
+
+    /**
+     * Fetches a single departure, on a given Id.
+     * For showing a more detailed description of a departure before booking.
+     * @param departureId Id of the departure.
+     * @return A single Departureidentifier.
+     */
+    DepartureIdentifier getDeparture(long departureId) throws NotFoundException, UnexpectedErrorException;
     
     /**
      * Fetches a list of of RouteSummaries, in order for the frontend to display the existing routes.
