@@ -16,6 +16,16 @@ public class ReservationSummary extends ReservationIdentifier {
     private String departureName;
     private int travellingEntityCount;
 
+    public ReservationSummary(boolean hasArrived, String personName, String departureName, int travellingEntityCount, long reservationId) {
+        super(reservationId);
+        this.hasArrived = hasArrived;
+        this.personName = personName;
+        this.departureName = departureName;
+        this.travellingEntityCount = travellingEntityCount;
+    }
+
+    
+    
     public boolean isHasArrived() {
         return hasArrived;
     }

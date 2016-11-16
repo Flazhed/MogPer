@@ -18,6 +18,14 @@ public class RouteDetail extends RouteIdentifier{
     private HarbourSummary harbourDestination;
     private Price price;
 
+    public RouteDetail(double travelTime, HarbourSummary harbourOrigin, HarbourSummary harbourDestination, Price price, long routeId) {
+        super(routeId);
+        this.travelTime = travelTime;
+        this.harbourOrigin = harbourOrigin;
+        this.harbourDestination = harbourDestination;
+        this.price = price;
+    }
+
     public double getTravelTime() {
         return travelTime;
     }

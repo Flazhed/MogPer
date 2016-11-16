@@ -17,6 +17,11 @@ public class HarbourDetails extends HarbourIdentifier {
     private String name;
     private List<Ferry> ferries;
 
+    public HarbourDetails(String name, List<Ferry> ferries) {
+        this.name = name;
+        this.ferries = ferries;
+    }
+
     public String getName() {
         return name;
     }

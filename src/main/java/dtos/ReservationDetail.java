@@ -19,6 +19,16 @@ public class ReservationDetail extends ReservationIdentifier {
     private DepartureDetail departure;
     private List<TravellingEntity> travellingEntities;
 
+    public ReservationDetail(boolean hasArrived, PersonDetail person, DepartureDetail departure, List<TravellingEntity> travellingEntities, long reservationId) {
+        super(reservationId);
+        this.hasArrived = hasArrived;
+        this.person = person;
+        this.departure = departure;
+        this.travellingEntities = travellingEntities;
+    }
+
+    
+    
     public boolean isHasArrived() {
         return hasArrived;
     }

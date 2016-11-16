@@ -14,6 +14,10 @@ public class HarbourSummary extends HarbourIdentifier{
 
     private String name;
 
+    public HarbourSummary(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

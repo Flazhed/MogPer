@@ -10,6 +10,9 @@ package dtos;
  * @author Soren
  */
 public class HarbourIdentifier {
+
+    public HarbourIdentifier() {
+    }
     
     
     

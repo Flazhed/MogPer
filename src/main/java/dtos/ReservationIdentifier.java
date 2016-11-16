@@ -14,6 +14,10 @@ public class ReservationIdentifier {
     
     private long reservationId;
 
+    public ReservationIdentifier(long reservationId) {
+        this.reservationId = reservationId;
+    }
+
     public long getReservationId() {
         return reservationId;
     }

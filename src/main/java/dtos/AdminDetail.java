@@ -14,6 +14,11 @@ public class AdminDetail {
     private String userName;
     private String password;
 
+    public AdminDetail(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+
     public String getUserName() {
         return userName;
     }

@@ -13,6 +13,12 @@ public class RouteIdentifier {
     
     private long routeId;
 
+    public RouteIdentifier(long routeId) {
+        this.routeId = routeId;
+    }
+
+    
+    
     public long getRouteId() {
         return routeId;
     }

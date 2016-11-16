@@ -15,6 +15,13 @@ public class RouteSummary extends RouteIdentifier {
     private String harbourOrigin;
     private String harbourDestination;
 
+    public RouteSummary(double travelTime, String harbourOrigin, String harbourDestination, long routeId) {
+        super(routeId);
+        this.travelTime = travelTime;
+        this.harbourOrigin = harbourOrigin;
+        this.harbourDestination = harbourDestination;
+    }
+
     public double getTravelTime() {
         return travelTime;
     }

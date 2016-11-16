@@ -13,6 +13,12 @@ public class DepartureIdentifier {
     
     private long departureId;
 
+    public DepartureIdentifier(long departureId) {
+        this.departureId = departureId;
+    }
+
+    
+    
     public long getDepartureId() {
         return departureId;
     }
